@@ -1,6 +1,7 @@
 package com.example.demo.service.impliments;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,4 +51,16 @@ public class MarqueService implements IMarque {
     public Marque getMarqueByIdMarque(Long id) { 
         return null;
     }
+
+	@Override
+	public List<Marque> getAllMarques() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Marque> getMarqueById(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
 }

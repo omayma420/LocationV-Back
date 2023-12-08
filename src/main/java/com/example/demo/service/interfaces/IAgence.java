@@ -1,6 +1,7 @@
 package com.example.demo.service.interfaces;
 import com.example.demo.persistance.entities.Agence;
 import java.util.List;
+import java.util.Optional;
 
 public interface IAgence {
 
@@ -12,5 +13,8 @@ public interface IAgence {
     Agence findAgenceByName(String nom);
     int getQuantityOfAgence();
     Agence getAgenceByIdAgence(Long id);
+	Agence getAgenceByIdAgence1(Long id);
+	List<Agence> getAllAgences();
+	Optional<Agence> getAgenceById(Long id);
 
 }

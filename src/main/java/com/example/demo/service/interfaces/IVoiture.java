@@ -2,6 +2,7 @@ package com.example.demo.service.interfaces;
 import com.example.demo.persistance.entities.Voiture;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IVoiture {
 	Voiture saveVoiture(Voiture voiture);
@@ -10,6 +11,9 @@ public interface IVoiture {
     List<Voiture> getListVoiture();
     Voiture getVoiture(Long id);
     Voiture findVoitureByCouleur(String couleur);
-    Voiture getVoitureByIdVoiture(Long id);
+    Voiture getVoitureByIdVoiture();
+	List<Voiture> getAllvoitures();
+	Voiture getVoitureByIdVoiture(Long id);
+	Optional<Voiture> getVoitureById(Long id);
 
 }

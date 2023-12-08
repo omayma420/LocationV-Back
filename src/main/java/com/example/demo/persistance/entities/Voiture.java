@@ -16,11 +16,16 @@ import lombok.AllArgsConstructor;
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Voiture implements Serializable{
+	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; 
 	private String matricule;
 	private String couleur;
 	private String modele; 
+	public Voiture() {
+		super();
+	}
+
 	private Date date_fab;
 	private Long prix_location;
 	public Voiture(Long id, String matricule, String couleur, String modele, Date date_fab, Long prix_location) {
@@ -65,6 +70,7 @@ public class Voiture implements Serializable{
 	public Long getPrix_location() {
 		return prix_location;
 	}
+	
 	public void setPrix_location(Long prix_location) {
 		this.prix_location = prix_location;
 	}
